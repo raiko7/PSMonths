@@ -29,8 +29,8 @@ $2018
 Lines starting with '#' are treated as command lines. The line starting with '$' defines the year. All the other lines define events, where each event follows the form <*month*>:<*day*>:<*description*>. If the description ends with an asterisk ('*'), the event's day is printed as a holiday.
 
 For the example above *PSMonths* creates the following files:
-* [2018y](https://github.com/raiko7/PSMonths/Example/2018y.pdf)
-* [2018m](https://github.com/raiko7/PSMonths/Example/2018m.pdf)
+* [2018y](https://github.com/raiko7/PSMonths/blob/master/Example/2018y.pdf)
+* [2018m](https://github.com/raiko7/PSMonths/blob/master/Example/2018m.pdf)
 
 # Customization
 In order to adapt *PSMonths* to another language and country you first have to change month names and day names:
