@@ -32,186 +32,186 @@ static const char *spBoxIDs[] = {
 static const char cEmptyStr[] = "";
 
 static const char cHeaderStr[] =
-	"%%!PS-Adobe-1.0\n"
-	"%%%%Title: output.ps\n"
-	"%%%%Creator: PSMonths\n"
-	"%%%%CreationDate: (01/10/06 00:00:00)\n"
-	"%%%%DocumentFonts: Helvetica Helvetica-Bold\n"
-	"%%%%Pages: (atend)\n"
+   "%%!PS-Adobe-1.0\n"
+   "%%%%Title: output.ps\n"
+   "%%%%Creator: PSMonths\n"
+   "%%%%CreationDate: (01/10/06 00:00:00)\n"
+   "%%%%DocumentFonts: Helvetica Helvetica-Bold\n"
+   "%%%%Pages: (atend)\n"
    "%%%%Orientation: %s\n" // Parameter: Portrait or Landscape
-	"%%%%EndComments\n"
-	"\n";
+   "%%%%EndComments\n"
+   "\n";
 
 static const char cTrailerStr[] =
-	"%%%%Trailer\n"
-	"%%%%Pages: %d\n"; // Parameter: page count
+   "%%%%Trailer\n"
+   "%%%%Pages: %d\n"; // Parameter: page count
 
 static const char cMonthPerPageDefsStr[] =
-	"/headerSize 24 def\n"
-	"\n"
-	"/textSize 14 def\n"
-	"/hMargin   4 def\n"
-	"/vMargin   4 def\n"
-	"/height   22 def\n"
-	"\n"
-	"/lWidth  60 def\n"
-	"/rWidth 460 def\n"
-	"\n"
-	"/hOrigin  30 def\n"
-	"/vOrigin 780 def\n"
-	"\n";
+   "/headerSize 24 def\n"
+   "\n"
+   "/textSize 14 def\n"
+   "/hMargin   4 def\n"
+   "/vMargin   4 def\n"
+   "/height   22 def\n"
+   "\n"
+   "/lWidth  60 def\n"
+   "/rWidth 460 def\n"
+   "\n"
+   "/hOrigin  30 def\n"
+   "/vOrigin 780 def\n"
+   "\n";
 
 static const char cHalfYearPerPageDefsStr[] =
-	"/textSize  8 def   %% used in PBox\n"
-	"/hMargin   2 def   %% used in PBox\n"
-	"/vMargin   4 def   %% used in PBox\n"
-	"/height   16 def   %% used in PBox, SBox, BText\n"
-	"\n"
-	"/bTextSize 10 def   %% used in PText\n"
-	"/bvMargin   2 def   %% used in PText\n"
-	"\n"
-	"/lWidth 28 def\n"
-	"/rWidth 92 def\n"
-	"\n"
-	"/tWidth lWidth rWidth add def\n"
-	"\n";
+   "/textSize  8 def   %% used in PBox\n"
+   "/hMargin   2 def   %% used in PBox\n"
+   "/vMargin   4 def   %% used in PBox\n"
+   "/height   16 def   %% used in PBox, SBox, BText\n"
+   "\n"
+   "/bTextSize 10 def   %% used in PText\n"
+   "/bvMargin   2 def   %% used in PText\n"
+   "\n"
+   "/lWidth 28 def\n"
+   "/rWidth 92 def\n"
+   "\n"
+   "/tWidth lWidth rWidth add def\n"
+   "\n";
 
 static const char cBoxDefsStr[] =
-	"/PBox {\n"
-	"   3 -1 roll dup 4 1 roll\n"
-	"   3 -1 roll dup 4 1 roll\n"
-	"   3 -1 roll dup 4 1 roll\n"
-	"   gsave\n"
-	"   newpath\n"
-	"      moveto\n"
-	"      0 0 height sub rlineto\n"
-	"      0 rlineto\n"
-	"      0 height rlineto\n"
-	"      closepath\n"
-	"      clip\n"
-	"      .0 setgray\n"
-	"   stroke\n"
-	"   2 -1 roll dup 3 1 roll hMargin add\n"
-	"   2 -1 roll dup 3 1 roll vMargin sub textSize sub\n"
-	"   moveto\n"
-	"   4 -1 roll\n"
-	"   show\n"
-	"   4 1 roll\n"
-	"   add hMargin sub\n"
-	"   2 -1 roll dup 3 1 roll\n"
-	"   stringwidth pop sub\n"
-	"   3 -1 roll\n"
-	"   vMargin sub textSize sub\n"
-	"   moveto\n"
-	"   show\n"
-	"   grestore\n"
-	"} def\n"
-	"\n"
-	"/SBox {\n"
-	"   3 -1 roll dup 4 1 roll\n"
-	"   3 -1 roll dup 4 1 roll\n"
-	"   3 -1 roll dup 4 1 roll\n"
-	"   newpath\n"
-	"      moveto\n"
-	"      0 0 height sub rlineto\n"
-	"      0 rlineto\n"
-	"      0 height rlineto\n"
-	"      closepath\n"
-	"      .8 setgray\n"
-	"      fill\n"
-	"   stroke\n"
-	"   PBox\n"
-	"} def\n"
-	"\n";
+   "/PBox {\n"
+   "   3 -1 roll dup 4 1 roll\n"
+   "   3 -1 roll dup 4 1 roll\n"
+   "   3 -1 roll dup 4 1 roll\n"
+   "   gsave\n"
+   "   newpath\n"
+   "      moveto\n"
+   "      0 0 height sub rlineto\n"
+   "      0 rlineto\n"
+   "      0 height rlineto\n"
+   "      closepath\n"
+   "      clip\n"
+   "      .0 setgray\n"
+   "   stroke\n"
+   "   2 -1 roll dup 3 1 roll hMargin add\n"
+   "   2 -1 roll dup 3 1 roll vMargin sub textSize sub\n"
+   "   moveto\n"
+   "   4 -1 roll\n"
+   "   show\n"
+   "   4 1 roll\n"
+   "   add hMargin sub\n"
+   "   2 -1 roll dup 3 1 roll\n"
+   "   stringwidth pop sub\n"
+   "   3 -1 roll\n"
+   "   vMargin sub textSize sub\n"
+   "   moveto\n"
+   "   show\n"
+   "   grestore\n"
+   "} def\n"
+   "\n"
+   "/SBox {\n"
+   "   3 -1 roll dup 4 1 roll\n"
+   "   3 -1 roll dup 4 1 roll\n"
+   "   3 -1 roll dup 4 1 roll\n"
+   "   newpath\n"
+   "      moveto\n"
+   "      0 0 height sub rlineto\n"
+   "      0 rlineto\n"
+   "      0 height rlineto\n"
+   "      closepath\n"
+   "      .8 setgray\n"
+   "      fill\n"
+   "   stroke\n"
+   "   PBox\n"
+   "} def\n"
+   "\n";
 
 static const char cTextDefsStr[] =
-	"/PText {\n"
-	"   moveto\n"
-	"   2 div\n"
-	"   bvMargin neg bTextSize sub rlineto\n"
-	"   dup stringwidth pop\n"
-	"   2 div\n"
-	"   neg\n"
-	"   0 rlineto\n"
-	"   show\n"
-	"} def\n"
-	"\n"
-	"/BText {\n"
-	"   3 -1 roll dup 4 1 roll\n"
-	"   3 -1 roll dup 4 1 roll\n"
-	"   3 -1 roll dup 4 1 roll\n"
-	"   newpath\n"
-	"      moveto\n"
-	"      0 0 height sub rlineto\n"
-	"      0 rlineto\n"
-	"      0 height rlineto\n"
-	"      closepath\n"
-	"   stroke\n"
-	"   PText\n"
-	"} def\n"
-	"\n";
+   "/PText {\n"
+   "   moveto\n"
+   "   2 div\n"
+   "   bvMargin neg bTextSize sub rlineto\n"
+   "   dup stringwidth pop\n"
+   "   2 div\n"
+   "   neg\n"
+   "   0 rlineto\n"
+   "   show\n"
+   "} def\n"
+   "\n"
+   "/BText {\n"
+   "   3 -1 roll dup 4 1 roll\n"
+   "   3 -1 roll dup 4 1 roll\n"
+   "   3 -1 roll dup 4 1 roll\n"
+   "   newpath\n"
+   "      moveto\n"
+   "      0 0 height sub rlineto\n"
+   "      0 rlineto\n"
+   "      0 height rlineto\n"
+   "      closepath\n"
+   "   stroke\n"
+   "   PText\n"
+   "} def\n"
+   "\n";
 
 static const char cFontDefsStr[] =
-	"/ReEncodeSmallDict 12 dict def\n"
-	"\n"
-	"/ReEncodeSmall\n"
-	"{\n"
-	"ReEncodeSmallDict begin\n"
-	"  /NewCodesAndNames exch def\n"
-	"  /NewFontName exch def\n"
-	"  /BaseFontName exch def\n"
-	"\n"
-	"  /BaseFontDict BaseFontName findfont def\n"
-	"  /NewFont BaseFontDict maxlength dict def\n"
-	"\n"
-	"  BaseFontDict\n"
-	"  {\n"
-	"    exch dup /FID ne\n"
-	"    {\n"
-	"      dup /Encoding eq\n"
-	"      { exch dup length array copy NewFont 3 1 roll put }\n"
-	"      { exch NewFont 3 1 roll put }\n"
-	"      ifelse\n"
-	"    }\n"
-	"    { pop pop }\n"
-	"    ifelse\n"
-	"  } forall\n"
-	"\n"
-	"  NewFont /FontName NewFontName put\n"
-	"  NewCodesAndNames aload pop\n"
-	"\n"
-	"  NewCodesAndNames length 2 idiv\n"
-	"  { NewFont /Encoding get 3 1 roll put\n"
-	"  } repeat\n"
-	"  NewFontName NewFont definefont pop\n"
-	"  end\n"
-	"} def\n"
-	"\n"
-	"/GermanMap\n"
-	"[\n"
-	"  8#212 /adieresis\n"
-	"  8#200 /Adieresis\n"
-	"  8#232 /odieresis\n"
-	"  8#205 /Odieresis\n"
-	"  8#237 /udieresis\n"
-	"  8#206 /Udieresis\n"
-	"  8#247 /germandbls\n"
-	"] def\n"
-	"\n"
-	"/Helvetica-Bold /Helvetica-Bold-German GermanMap ReEncodeSmall\n"
-	"/Helvetica      /Helvetica-German      GermanMap ReEncodeSmall\n"
-	"\n"
-	"/newpage {\n"
-	"  gsave\n"
-	"  .25 setlinewidth\n"
-	"} def\n"
-	"\n"
-	"/endpage {\n"
-	"  grestore\n"
-	"  save\n"
-	"  restore\n"
-	"  showpage\n"
-	"} def\n";
+   "/ReEncodeSmallDict 12 dict def\n"
+   "\n"
+   "/ReEncodeSmall\n"
+   "{\n"
+   "ReEncodeSmallDict begin\n"
+   "  /NewCodesAndNames exch def\n"
+   "  /NewFontName exch def\n"
+   "  /BaseFontName exch def\n"
+   "\n"
+   "  /BaseFontDict BaseFontName findfont def\n"
+   "  /NewFont BaseFontDict maxlength dict def\n"
+   "\n"
+   "  BaseFontDict\n"
+   "  {\n"
+   "    exch dup /FID ne\n"
+   "    {\n"
+   "      dup /Encoding eq\n"
+   "      { exch dup length array copy NewFont 3 1 roll put }\n"
+   "      { exch NewFont 3 1 roll put }\n"
+   "      ifelse\n"
+   "    }\n"
+   "    { pop pop }\n"
+   "    ifelse\n"
+   "  } forall\n"
+   "\n"
+   "  NewFont /FontName NewFontName put\n"
+   "  NewCodesAndNames aload pop\n"
+   "\n"
+   "  NewCodesAndNames length 2 idiv\n"
+   "  { NewFont /Encoding get 3 1 roll put\n"
+   "  } repeat\n"
+   "  NewFontName NewFont definefont pop\n"
+   "  end\n"
+   "} def\n"
+   "\n"
+   "/GermanMap\n"
+   "[\n"
+   "  8#212 /adieresis\n"
+   "  8#200 /Adieresis\n"
+   "  8#232 /odieresis\n"
+   "  8#205 /Odieresis\n"
+   "  8#237 /udieresis\n"
+   "  8#206 /Udieresis\n"
+   "  8#247 /germandbls\n"
+   "] def\n"
+   "\n"
+   "/Helvetica-Bold /Helvetica-Bold-German GermanMap ReEncodeSmall\n"
+   "/Helvetica      /Helvetica-German      GermanMap ReEncodeSmall\n"
+   "\n"
+   "/newpage {\n"
+   "  gsave\n"
+   "  .25 setlinewidth\n"
+   "} def\n"
+   "\n"
+   "/endpage {\n"
+   "  grestore\n"
+   "  save\n"
+   "  restore\n"
+   "  showpage\n"
+   "} def\n";
 
 //------------------------------------------------------------------------------
 //  Functions
@@ -248,7 +248,7 @@ void CFormatter::Run(int year, const TDayMap &days) {
    TDayKey   key;
    TDayData  data;
    int       month, day, wDay, mDays, week;
-	bool      highlighted;
+   bool      highlighted;
 
    wDay = DayOfWeek(1, 1, year);
    week = 1;
@@ -265,16 +265,16 @@ void CFormatter::Run(int year, const TDayMap &days) {
 
       for (day=1; day<=mDays; ++day) {
 
-        	std::string descr;
-			highlighted = wDay == eDowSunday;
+         std::string descr;
+         highlighted = wDay == eDowSunday;
 
          key.mDay = day;
          TDayMap::const_iterator it = days.find(key);
          if (it != days.end()) {
-				descr = it->second.mDescr;
-				if (it->second.mHighlighted) {
-					highlighted = true;
-				}
+            descr = it->second.mDescr;
+            if (it->second.mHighlighted) {
+               highlighted = true;
+            }
          }
 
          OnMonthDay(day, wDay, week, descr.c_str(), highlighted);
@@ -308,22 +308,22 @@ void CMonthPerPageFormatter::OnYearEnd(int year) {
 void CMonthPerPageFormatter::OnMonthBegin(int year, int month) {
    (void)year;
    Printf(
-		"%%%%Page: %d %d\n"
-		"newpage\n"
-		"/Helvetica-Bold-German findfont headerSize scalefont setfont\n"
-		"hOrigin vOrigin moveto (%s) show\n"
-		"/Helvetica-German findfont textSize scalefont setfont\n"
-		"/hPos hOrigin        def\n"
-		"/vPos vOrigin 40 sub def\n",
-		month, month, spMonths[month - 1]);
+      "%%%%Page: %d %d\n"
+      "newpage\n"
+      "/Helvetica-Bold-German findfont headerSize scalefont setfont\n"
+      "hOrigin vOrigin moveto (%s) show\n"
+      "/Helvetica-German findfont textSize scalefont setfont\n"
+      "/hPos hOrigin        def\n"
+      "/vPos vOrigin 40 sub def\n",
+      month, month, spMonths[month - 1]);
 }
 
 void CMonthPerPageFormatter::OnMonthEnd(int year, int month) {
    (void)year;
    Printf(
-		"endpage\n"
-		"%%%%EndPage: %d %d\n\n",
-		month, month);
+      "endpage\n"
+      "%%%%EndPage: %d %d\n\n",
+      month, month);
 }
 
 void CMonthPerPageFormatter::OnMonthDay(int day, int wDay, int week, const char *pDescr, bool highlighted) {

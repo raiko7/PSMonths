@@ -22,7 +22,7 @@ static const char sEscChars[] =
    "\xe4\xc4\xf6\xd6\xfc\xdc\xdf()\\";   // ä Ä ö Ö ü Ü ß ( ) \ 
 
 static const char * const spUmlauts[] = {
-	"\\212", "\\200", "\\232", "\\205", "\\237", "\\206", "\\247"
+   "\\212", "\\200", "\\232", "\\205", "\\237", "\\206", "\\247"
 };
 
 static const int cUmlautCnt = sizeof spUmlauts / sizeof spUmlauts[0];
@@ -41,22 +41,22 @@ static TDayMap sDays;
 //
 static void ModifyUmlauts(std::string &rStr) {
 
-	std::string::size_type pos1 = 0, pos2;
-	int                    i;
+   std::string::size_type pos1 = 0, pos2;
+   int                    i;
 
-	while ((pos2 = rStr.find_first_of(sEscChars, pos1)) != std::string::npos) {
-		for (i=0; i<cUmlautCnt && rStr[pos2]!=sEscChars[i]; ++i)
-			;
-		if (i < cUmlautCnt) {
-			rStr.replace(pos2, 1, spUmlauts[i]);
-			pos2 += 3;
-		} else {
-			rStr.insert(pos2, "\\");
-			pos2 += 1;
-		}
-		pos1 = pos2 + 1;
-	}
-	
+   while ((pos2 = rStr.find_first_of(sEscChars, pos1)) != std::string::npos) {
+      for (i=0; i<cUmlautCnt && rStr[pos2]!=sEscChars[i]; ++i)
+         ;
+      if (i < cUmlautCnt) {
+         rStr.replace(pos2, 1, spUmlauts[i]);
+         pos2 += 3;
+      } else {
+         rStr.insert(pos2, "\\");
+         pos2 += 1;
+      }
+      pos1 = pos2 + 1;
+   }
+   
 }
 
 //------------------------------------------------------------------------------

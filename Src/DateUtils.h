@@ -13,13 +13,13 @@
 *  Types
 */
 enum TDayOfWeek {
-	eDowMonday    = 0,
-	eDowTuesday   = 1,
-	eDowWednesday = 2,
-	eDowThursday  = 3,
-	eDowFriday    = 4,
-	eDowSaturday  = 5,
-	eDowSunday    = 6
+   eDowMonday    = 0,
+   eDowTuesday   = 1,
+   eDowWednesday = 2,
+   eDowThursday  = 3,
+   eDowFriday    = 4,
+   eDowSaturday  = 5,
+   eDowSunday    = 6
 };
 
 /*-------------------------------------------------------------------------------
