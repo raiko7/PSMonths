@@ -1,9 +1,9 @@
 # Overview
-*PSMonths* is a PostScript month calendar generator. It comes with pre-defined holidays for Austria and allows you to add per-day events using a text-based configuration. It creates two PostScript output files:
+*PSMonths* is a PostScript month calendar generator. It comes with pre-defined holidays for Austria and allows you to add per-day events using a text-based configuration. It creates two PostScript files:
 * a year view consisting of two pages, one page per half-year
 * a month view consisting of 12 pages, one page per month
 
-In order to convert generated PostScript files to PDF, you have two options:
+In order to convert generated PostScript files to PDF you have two choices:
 1. Install and use [GhostScript](https://www.ghostscript.com/)
 2. Use a free online service, for example [Online2PDF](https://online2pdf.com/convert-ps-to-pdf) or [ps2pdf](http://www.ps2pdf.com/)
 
@@ -45,7 +45,7 @@ static const char * const spWeekdays[] = {
 };
 ```
 
-If the language uses diacritical signs, their translation to PostScript must be specified as follows:
+If the language has special characters (with diacritical signs, for example), translation to PostScript must be specified as follows:
 ```cpp
 // PSMonths.cpp
 static const char sEscChars[] =
@@ -54,7 +54,7 @@ static const char * const spUmlauts[] = {
 	"\\212", "\\200", "\\232", "\\205", "\\237", "\\206", "\\247"
 };
 ```
-Finally, pre-defined holidays of a country are defined in the function `InsertHolidays`:
+Finally, pre-defined holidays of a country are specified in the function `InsertHolidays`:
 ```cpp
 // PSMonths.cpp
 static void InsertHolidays(int year) {
@@ -63,4 +63,7 @@ static void InsertHolidays(int year) {
 ```
 
 # Requirements
-In order to run the build using the provided project files you need at least Visual Studio 2017 Commodity Edition.
+In order to run the build using the provided project files you need at least Visual Studio 2017. *PSMonths* was originally implemented in Standard C++98 and recently updated to Standard C++11. Thus it should run out of the box on every platform.
+
+# Author
+*PSMonths* (including the PostScript code framework for the output files) was written by Rainer Koppler.
