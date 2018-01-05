@@ -45,15 +45,16 @@ static const char * const spWeekdays[] = {
 };
 ```
 
-If the language has special characters (with diacritical signs, for example), translation to PostScript must be specified as follows:
+If the language has special characters, these have to be listed at the beginning of `sEscChars` (characters to be escaped) and the translation to PostScript must be listed accordingly in `spUmlauts`. The implementation assumes that special characters can be encoded in 8 Bits (for example, ISO 8859-1 for German umlauts).
 ```cpp
 // PSMonths.cpp
 static const char sEscChars[] =
    "\xe4\xc4\xf6\xd6\xfc\xdc\xdf()\\";
 static const char * const spUmlauts[] = {
-	"\\212", "\\200", "\\232", "\\205", "\\237", "\\206", "\\247"
+   "\\212", "\\200", "\\232", "\\205", "\\237", "\\206", "\\247"
 };
 ```
+
 Finally, pre-defined holidays of a country are specified in the function `InsertHolidays`:
 ```cpp
 // PSMonths.cpp
