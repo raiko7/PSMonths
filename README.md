@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/raiko7/PSMonths.svg?branch=master)](https://travis-ci.org/raiko7/PSMonths)
+
 # Overview
 *PSMonths* is a PostScript month calendar generator. It comes with pre-defined holidays for Austria and allows you to add per-day events using a text-based configuration. It creates two PostScript files:
 * a year view consisting of two pages, one page per half-year
