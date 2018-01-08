@@ -7,7 +7,6 @@
 //
 //==============================================================================
 //
-#include <time.h>
 
 /*-------------------------------------------------------------------------------
 *  Types
@@ -28,8 +27,8 @@ enum TDayOfWeek {
 bool IsLeapYear (int year);
 int  DaysInMonth(int month, int year);
 
-TDayOfWeek DayOfWeek(int day, int month, int year);   // in range [0..6]
-int        DayOfYear(int day, int month, int year);   // in range [0..365]
+TDayOfWeek DayOfWeek(int day, int month, int year);
+int        DayOfYear(int day, int month, int year);
 
 void GetEasterOfYear(int year, int &rDay, int &rMonth);
 

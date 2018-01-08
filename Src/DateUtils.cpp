@@ -42,14 +42,11 @@ int DaysInMonth(int month, int year) {
    
    if (month==4 || month==6 || month==9 || month==11) {
       return 30;
-   }
-   else if (month != 2) {
+   } else if (month != 2) {
       return 31;
-   }
-   else if (IsLeapYear(year)) {
+   } else if (IsLeapYear(year)) {
       return 29;
-   }
-   else {
+   } else {
       return 28;
    }
 }
